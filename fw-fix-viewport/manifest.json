@@ -1,0 +1,26 @@
+{
+  "name": "FW fix viewport",
+  "description": "开发辅助工具, 修复windows高清屏下viewport显示不正确的问题",
+  "version": "2.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "extension for FW"
+  },
+  "content_scripts": [{
+      "matches": [
+          "http://fe.9888.cn/*",
+          "https://fe.9888.cn/*",
+          "https://m.easyloan888.com/*",
+          "https://m.9888.cn/*"
+      ],
+      "js": ["fix-viewport.js"],
+      "run_at": "document_end"
+  }],
+  "manifest_version": 2
+}
