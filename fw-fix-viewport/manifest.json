@@ -1,7 +1,7 @@
 {
-  "name": "FW fix viewport",
-  "description": "开发辅助工具, 修复windows高清屏下viewport显示不正确的问题",
-  "version": "2.0",
+  "name": "fw-devtools",
+  "description": "开发辅助工具",
+  "version": "2.1",
   "permissions": [
     "activeTab"
   ],

@@ -7,6 +7,7 @@
 // 	});
 // });
 
+//  修复windows高清屏下viewport显示不正确的问题
 (function () {
 	var cw = document.documentElement.clientWidth;
 	var metas = document.getElementsByTagName('meta'), vw;
