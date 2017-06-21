@@ -3,7 +3,8 @@
   "description": "开发辅助工具",
   "version": "2.2",
   "permissions": [
-    "activeTab"
+    "tabs",
+    "storage"
   ],
   "background": {
     "scripts": [
