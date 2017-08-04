@@ -1,14 +1,7 @@
-// auto run in matched pattern urls
-
-// chrome.browserAction.onClicked.addListener(function (tab) {
-// 	// No tabs or host permissions needed!
-// 	chrome.tabs.executeScript({
-// 		code: 'sessionStorage.__fix_viewport = 1; location.reload()'
-// 	});
-// });
-
 //  修复windows高清屏下viewport显示不正确的问题
 (function () {
+	if (!location.pathname.startsWith('/static/')) return;
+
 	var cw = document.documentElement.clientWidth;
 	var metas = document.getElementsByTagName('meta'), vw;
 	for (var i = 0; i < metas.length; i++) {

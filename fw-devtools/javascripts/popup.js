@@ -16,7 +16,6 @@ chrome.tabs.query({
 
     if (pt.startsWith('/static/loan')) {
         g('project-name').innerText = '放心花'
-        showFXHValue()
     } else if (pt.startsWith('/static/wap')) {
         g('project-name').innerText = '金融工场'
     } else if (pt.startsWith('/static/mall')) {
@@ -27,13 +26,24 @@ chrome.tabs.query({
 
 })
 
-function showFXHValue() {
-    g('fxh-panel').style.display = 'block'
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('mobx_store')
+        .addEventListener('click', function () {
+            chrome.tabs.executeScript(null, {
+                file: "javascripts/inject-mobx-stores.js"
+            }, function () {
+                window.close()
+            })
+        })
+
+    document.getElementById('mobx_data')
+        .addEventListener('click', function () {
 
 
-    chrome.storage.local.get(
-        ['user_token', 'user_status', 'user_invite_code', 'user_id', 'user_phone'],
-        items => {
-            console.log('Settings retrieved', items);
-        });
-}
+            chrome.tabs.executeScript(null, {
+                file: "javascripts/inject-mobx-data.js"
+            }, function () {
+                window.close()
+            })
+        })
+});

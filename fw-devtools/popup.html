@@ -11,18 +11,33 @@
             background: whitesmoke;
         }
 
-        .table {}
+        .btn {
+            display: inline-block;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            padding: 3px 5px;
+            margin: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #e3e3e3;
+        }
+
+        .btn:active {
+            background: #d8d8d8;
+        }
     </style>
 </head>
 
 <body>
     <p>项目名称: <b id="project-name"></b></p>
+    <p>
+        <a class="btn" id="mobx_store">Mobx Store</a>
+        <a class="btn" id="mobx_data">Store Data</a>
+    </p>
 
-    <div id="fxh-panel" style="display: none">
-
-    </div>
-    <p></p>
-
-    <script src="./popup.js"></script>
+    <script src="javascripts/popup.js"></script>
 
 </body>
