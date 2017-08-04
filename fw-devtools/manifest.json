@@ -1,7 +1,7 @@
 {
   "name": "fw-devtools",
-  "description": "开发辅助工具",
-  "version": "2.2",
+  "description": "FW开发辅助工具",
+  "version": "2.3",
   "permissions": [
     "tabs",
     "storage",
