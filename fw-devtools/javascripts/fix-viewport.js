@@ -1,6 +1,6 @@
 //  修复windows高清屏下viewport显示不正确的问题
 (function () {
-	if (!location.pathname.startsWith('/static/')) return;
+	if (!location.pathname.startsWith('/static/') && location.hostname == 'm.9888.cn') return;
 
 	var cw = document.documentElement.clientWidth;
 	var metas = document.getElementsByTagName('meta'), vw;

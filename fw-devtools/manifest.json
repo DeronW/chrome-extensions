@@ -1,7 +1,7 @@
 {
   "name": "fw-devtools",
   "description": "FW开发辅助工具",
-  "version": "2.3",
+  "version": "2.3.2",
   "permissions": [
     "tabs",
     "storage",
@@ -31,10 +31,13 @@
   "content_scripts": [
     {
       "matches": [
-        "http://fe.9888.cn/*",
-        "https://fe.9888.cn/*",
+        "http://fe.9888.cn/static/*",
+        "https://fe.9888.cn/static/*",
         "https://m.easyloan888.com/*",
-        "https://m.9888.cn/*"
+        "https://m.9888.cn/static/*",
+        "https://www.gongchangp2p.com/static/*",
+        "https://www.gongchangzx.com/static/*",
+        "https://www.9888keji.com/static/*"
       ],
       "js": [
         "javascripts/fix-viewport.js"
